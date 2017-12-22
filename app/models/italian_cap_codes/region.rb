@@ -1,5 +1,5 @@
 module ItalianCapCodes
-  class Region < ActiveRecord::Base
+  class Region < ApplicationRecord
     has_many :provinces
     has_many :comunes, through: :provinces
   end

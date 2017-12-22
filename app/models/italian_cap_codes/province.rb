@@ -1,5 +1,5 @@
 module ItalianCapCodes
-  class Province < ActiveRecord::Base
+  class Province < ApplicationRecord
     belongs_to :region
     has_many :comunes
 
