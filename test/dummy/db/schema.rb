@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -14,31 +13,29 @@
 ActiveRecord::Schema.define(version: 20150316105525) do
 
   create_table "italian_cap_codes_comunes", force: :cascade do |t|
-    t.string   "post_code"
-    t.integer  "province_id"
-    t.string   "fiscal_code"
-    t.string   "istat_code"
-    t.string   "name"
-    t.string   "phone_prefix"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  add_index "italian_cap_codes_comunes", ["province_id"], name: "index_italian_cap_codes_comunes_on_province_id"
-
-  create_table "italian_cap_codes_provinces", force: :cascade do |t|
-    t.string   "full_name"
-    t.string   "short_name"
-    t.integer  "region_id"
+    t.string "post_code"
+    t.integer "province_id"
+    t.string "fiscal_code"
+    t.string "istat_code"
+    t.string "name"
+    t.string "phone_prefix"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["province_id"], name: "index_italian_cap_codes_comunes_on_province_id"
   end
 
-  add_index "italian_cap_codes_provinces", ["region_id"], name: "index_italian_cap_codes_provinces_on_region_id"
+  create_table "italian_cap_codes_provinces", force: :cascade do |t|
+    t.string "full_name"
+    t.string "short_name"
+    t.integer "region_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["region_id"], name: "index_italian_cap_codes_provinces_on_region_id"
+  end
 
   create_table "italian_cap_codes_regions", force: :cascade do |t|
-    t.string   "full_name"
-    t.string   "short_name"
+    t.string "full_name"
+    t.string "short_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
