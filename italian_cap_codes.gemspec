@@ -7,9 +7,9 @@ require "italian_cap_codes/version"
 Gem::Specification.new do |s|
   s.name        = "italian_cap_codes"
   s.version     = ItalianCapCodes::VERSION
-  s.authors     = ["Andrea Schiavini"]
-  s.email       = ["metalelf0@gmail.com"]
-  s.homepage    = "https://github.com/metalelf0/italian_cap_codes"
+  s.authors     = ["Daniele Pestilli"]
+  s.email       = ["byakugan.870@gmail.com"]
+  s.homepage    = "https://github.com/DaniG2k/italian_cap_codes"
   s.summary     = "An engine including models and data for italian regions, provinces and comunes"
   s.description = "An engine including models and data for italian regions, provinces and comunes"
   s.license     = "MIT"
@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 4.2.0"
+  s.add_dependency "rails", "~> 5.1.4"
 
   s.add_development_dependency "sqlite3"
 end

@@ -1,4 +1,4 @@
-class CreateItalianCapCodesProvinces < ActiveRecord::Migration
+class CreateItalianCapCodesProvinces < ActiveRecord::Migration[5.0]
   def change
     create_table :italian_cap_codes_provinces do |t|
       t.string :full_name
