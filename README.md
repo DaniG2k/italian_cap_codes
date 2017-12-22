@@ -14,7 +14,7 @@ Each of these models is ready to use in your app (relations, indexes etc. are al
 
 ```
 # add gem to Gemfile
-gem 'italian_cap_codes',  github: 'metalelf0/italian_cap_codes'
+gem 'italian_cap_codes',  github: 'DaniG2k/italian_cap_codes'
 
 # copy migrations and run them
 $ rake italian_cap_codes:install:migrations
