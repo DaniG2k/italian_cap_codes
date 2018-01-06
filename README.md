@@ -17,14 +17,14 @@ Each of these models is ready to use in your app (relations, indexes etc. are al
 gem 'italian_cap_codes',  github: 'DaniG2k/italian_cap_codes'
 
 # copy migrations and run them
-$ rake italian_cap_codes:install:migrations
-$ rake db:migrate
+$ rails italian_cap_codes:install:migrations
+$ rails db:migrate
 
 # add seed to your db/seeds.rb file:
 ItalianCapCodes::Engine.load_seed
 
 # run your seed:
-$ rake db:seed
+$ rails db:seed
 ```
 
 ## Changelog
