@@ -1,4 +1,4 @@
-class CreateItalianCapCodesComunes < ActiveRecord::Migration[5.0]
+class CreateItalianCapCodesComunes < ActiveRecord::Migration[5.1]
   def change
     create_table :italian_cap_codes_comunes do |t|
       t.string  :post_code

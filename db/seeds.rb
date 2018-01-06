@@ -6,11 +6,11 @@ puts "Importing italian regions, provinces and comunes..."
 file_path = ItalianCapCodes::Engine.root.join('db', 'seeds', 'seed_file.txt')
 
 puts "Warning: this will reset the content of the following tables:"
-puts " #{ ItalianCapCodes::Region.table_name}"
-puts " #{ ItalianCapCodes::Province.table_name}"
-puts " #{ ItalianCapCodes::Comune.table_name}"
+puts " #{ItalianCapCodes::Region.table_name}"
+puts " #{ItalianCapCodes::Province.table_name}"
+puts " #{ItalianCapCodes::Comune.table_name}"
 
-print "Do you want to continue? (y/n) > "
+print "Do you want to continue? (Y/n) > "
 response = STDIN.gets.chomp
 
 exit unless response.downcase == "y"
@@ -31,8 +31,8 @@ CSV.foreach(file_path, col_sep: ';') do |row|
   comune_cap          = row[7]
   comune_fiscal_code  = row[8]
 
-	# Find or create the region containing the province and the comune
-	region = ItalianCapCodes::Region.where(
+  # Find or create the region containing the province and the comune
+  region = ItalianCapCodes::Region.where(
     full_name: region_full_name
   ).first_or_create(
     full_name: region_full_name,
@@ -60,5 +60,3 @@ CSV.foreach(file_path, col_sep: ';') do |row|
   p "Comune #{comune.name} added to province #{province_short_name} and region #{region_short_name}"
 end
 puts "--> Done"
-
-
